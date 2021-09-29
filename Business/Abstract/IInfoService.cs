@@ -8,6 +8,8 @@ namespace Business.Abstract
 {
     public interface IInfoService
     {
-        IResult PublishMessage();
+        IResult PublishMessage(object message);
+        IResult TurnOffLight(object command);
+        IResult TurnOnLight(object command);
     }
 }
