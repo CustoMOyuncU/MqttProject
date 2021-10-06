@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Core.DataAccess.InfluxDB;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -57,6 +59,5 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
         }
-
     }
 }

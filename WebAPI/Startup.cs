@@ -1,3 +1,4 @@
+using Core.DataAccess.InfluxDB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,7 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<InfluxDbRepositoryBase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
